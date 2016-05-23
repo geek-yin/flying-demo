@@ -1,2 +1,2 @@
 # flying-demo
-a sinple demo for test
+a simple demo for test
