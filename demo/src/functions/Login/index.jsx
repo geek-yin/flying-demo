@@ -39,6 +39,10 @@ export default React.createClass({
     this.context.history.push(this.props.location.state.referrer)
   },
 
+  style() {
+    return "display:block";
+  },
+
   handleRemember(e) {
     const user = this.state.user
     user.remember = e.target.checked
@@ -58,11 +62,11 @@ export default React.createClass({
           <Form ref="form" className="loginform" action="login" onSuccess={this.handleSuccess} data={this.state.user} onChange={this.handleChange} labelWidth={0} rules={this.rules}>
             <div className="form-group form-bottom">
 				<FormItem name="username">
-              		<FormInput placeholder="账号"></FormInput>
+              		<FormInput placeholder="账号" className="bfd-form-input"></FormInput>
             	</FormItem>
 			</div>
             <FormItem name="password">
-              <FormInput placeholder="密码" type="password"></FormInput>
+              <FormInput placeholder="密码" type="password" ></FormInput>
             </FormItem>
             <FormItem name="remember">
               <Checkbox onChange={this.handleRemember}>下次自动登录</Checkbox>
